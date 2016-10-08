@@ -1,0 +1,535 @@
+body {
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.max-cards-1 .card-2, .max-cards-1 .card-3, .max-cards-1 .card-4, .max-cards-1 .card-5, .max-cards-1 .card-6, .max-cards-1 .card-7, .max-cards-1 .card-8, .max-cards-1 .card-9, .max-cards-2 .card-3, .max-cards-2 .card-4, .max-cards-2 .card-5, .max-cards-2 .card-6, .max-cards-2 .card-7, .max-cards-2 .card-8, .max-cards-2 .card-9, .max-cards-3 .card-4, .max-cards-3 .card-5, .max-cards-3 .card-6, .max-cards-3 .card-7, .max-cards-3 .card-8, .max-cards-3 .card-9, .max-cards-4 .card-5, .max-cards-4 .card-6, .max-cards-4 .card-7, .max-cards-4 .card-8, .max-cards-4 .card-9, .max-cards-5 .card-6, .max-cards-5 .card-7, .max-cards-5 .card-8, .max-cards-5 .card-9, .max-cards-6 .card-7, .max-cards-6 .card-8, .max-cards-6 .card-9, .max-cards-7 .card-8, .max-cards-7 .card-9, .max-cards-8 .card-9 {
+  display: none;
+}
+
+li.dropper {
+  width: 303px;
+  margin: 0 0 1em 0;
+}
+li.dropper div {
+  height: 211.52381px;
+  padding-bottom: 1em;
+  position: relative;
+  display: inline-block;
+}
+li.dropper div span,
+li.dropper div a {
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  height: 1em;
+  font-size: .75em;
+  top: 98.7619px;
+  width: 50%;
+  text-align: center;
+}
+li.dropper div span.back {
+  left: 50%;
+}
+li.dropper div a {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  font-weight: bold;
+  color: #E00;
+}
+li.dropper img {
+  position: relative;
+  z-index: 2;
+  width: 150px;
+  height: 209.52381px;
+  border: 1px solid #CCC;
+}
+li.dropper img + img {
+  margin-left: -1px;
+}
+
+@media screen {
+  body {
+    background-color: #e3e3e3;
+    margin: 2em;
+    padding: 0;
+  }
+
+  #screen {
+    background-color: #FFF;
+    max-width: 768px;
+    padding: 1em;
+    border-radius: 1em;
+    margin: auto;
+  }
+
+  #print {
+    display: none;
+  }
+}
+@page {
+  width: 8.5in;
+  height: 11in;
+  margin: 0;
+  size: portrait;
+}
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #screen {
+    display: none;
+  }
+
+  #print {
+    border: .25mm solid #000;
+    background-color: #000;
+    position: absolute;
+  }
+  #print img {
+    width: 63mm;
+    height: 88mm;
+    position: absolute;
+    padding: 1mm 0.71591mm;
+  }
+  #print img#black {
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #print.back img#black {
+    display: none;
+  }
+  #print.bleed img {
+    padding: 0;
+    width: 64.43182mm;
+    height: 90mm;
+  }
+  .max-cards-1 #print {
+    width: 64.43182mm;
+    height: 90mm;
+    left: 107.23409mm;
+    top: 62.7mm;
+  }
+  .max-cards-1 #print img.card-1 {
+    top: 0mm;
+    left: 0mm;
+  }
+  .max-cards-1 #print.back img.card-1 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-2 #print {
+    width: 128.86364mm;
+    height: 90mm;
+    left: 75.01818mm;
+    top: 62.7mm;
+  }
+  .max-cards-2 #print img.card-1 {
+    top: 0mm;
+    left: 0mm;
+  }
+  .max-cards-2 #print.back img.card-1 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-2 #print img.card-2 {
+    top: 0mm;
+    left: 64.43182mm;
+  }
+  .max-cards-2 #print.back img.card-2 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-3 #print {
+    width: 193.29545mm;
+    height: 90mm;
+    left: 42.80227mm;
+    top: 62.7mm;
+  }
+  .max-cards-3 #print img.card-1 {
+    top: 0mm;
+    left: 0mm;
+  }
+  .max-cards-3 #print.back img.card-1 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-3 #print img.card-2 {
+    top: 0mm;
+    left: 64.43182mm;
+  }
+  .max-cards-3 #print.back img.card-2 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-3 #print img.card-3 {
+    top: 0mm;
+    left: 128.86364mm;
+  }
+  .max-cards-3 #print.back img.card-3 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-4 #print {
+    width: 257.72727mm;
+    height: 90mm;
+    left: 10.58636mm;
+    top: 62.7mm;
+  }
+  .max-cards-4 #print img.card-1 {
+    top: 0mm;
+    left: 0mm;
+  }
+  .max-cards-4 #print.back img.card-1 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-4 #print img.card-2 {
+    top: 0mm;
+    left: 64.43182mm;
+  }
+  .max-cards-4 #print.back img.card-2 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-4 #print img.card-3 {
+    top: 0mm;
+    left: 128.86364mm;
+  }
+  .max-cards-4 #print.back img.card-3 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-4 #print img.card-4 {
+    top: 0mm;
+    left: 193.29545mm;
+  }
+  .max-cards-4 #print.back img.card-4 {
+    left: auto;
+    right: 193.29545mm;
+  }
+  .max-cards-5 #print {
+    width: 257.72727mm;
+    height: 180mm;
+    left: 10.58636mm;
+    top: 17.7mm;
+  }
+  .max-cards-5 #print img.card-1 {
+    top: 0mm;
+    left: 0mm;
+  }
+  .max-cards-5 #print.back img.card-1 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-5 #print img.card-2 {
+    top: 0mm;
+    left: 64.43182mm;
+  }
+  .max-cards-5 #print.back img.card-2 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-5 #print img.card-3 {
+    top: 0mm;
+    left: 128.86364mm;
+  }
+  .max-cards-5 #print.back img.card-3 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-5 #print img.card-4 {
+    top: 0mm;
+    left: 193.29545mm;
+  }
+  .max-cards-5 #print.back img.card-4 {
+    left: auto;
+    right: 193.29545mm;
+  }
+  .max-cards-5 #print img.card-5 {
+    top: 90mm;
+    left: 0mm;
+  }
+  .max-cards-5 #print.back img.card-5 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-6 #print {
+    width: 193.29545mm;
+    height: 180mm;
+    left: 42.80227mm;
+    top: 17.7mm;
+  }
+  .max-cards-6 #print img.card-1 {
+    top: 0mm;
+    left: 0mm;
+  }
+  .max-cards-6 #print.back img.card-1 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-6 #print img.card-2 {
+    top: 0mm;
+    left: 64.43182mm;
+  }
+  .max-cards-6 #print.back img.card-2 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-6 #print img.card-3 {
+    top: 0mm;
+    left: 128.86364mm;
+  }
+  .max-cards-6 #print.back img.card-3 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-6 #print img.card-4 {
+    top: 90mm;
+    left: 0mm;
+  }
+  .max-cards-6 #print.back img.card-4 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-6 #print img.card-5 {
+    top: 90mm;
+    left: 64.43182mm;
+  }
+  .max-cards-6 #print.back img.card-5 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-6 #print img.card-6 {
+    top: 90mm;
+    left: 128.86364mm;
+  }
+  .max-cards-6 #print.back img.card-6 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-7 #print {
+    width: 257.72727mm;
+    height: 180mm;
+    left: 10.58636mm;
+    top: 17.7mm;
+  }
+  .max-cards-7 #print img.card-1 {
+    top: 0mm;
+    left: 0mm;
+  }
+  .max-cards-7 #print.back img.card-1 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-7 #print img.card-2 {
+    top: 0mm;
+    left: 64.43182mm;
+  }
+  .max-cards-7 #print.back img.card-2 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-7 #print img.card-3 {
+    top: 0mm;
+    left: 128.86364mm;
+  }
+  .max-cards-7 #print.back img.card-3 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-7 #print img.card-4 {
+    top: 0mm;
+    left: 193.29545mm;
+  }
+  .max-cards-7 #print.back img.card-4 {
+    left: auto;
+    right: 193.29545mm;
+  }
+  .max-cards-7 #print img.card-5 {
+    top: 90mm;
+    left: 0mm;
+  }
+  .max-cards-7 #print.back img.card-5 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-7 #print img.card-6 {
+    top: 90mm;
+    left: 64.43182mm;
+  }
+  .max-cards-7 #print.back img.card-6 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-7 #print img.card-7 {
+    top: 90mm;
+    left: 128.86364mm;
+  }
+  .max-cards-7 #print.back img.card-7 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-8 #print {
+    width: 257.72727mm;
+    height: 180mm;
+    left: 10.58636mm;
+    top: 17.7mm;
+  }
+  .max-cards-8 #print img.card-1 {
+    top: 0mm;
+    left: 0mm;
+  }
+  .max-cards-8 #print.back img.card-1 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-8 #print img.card-2 {
+    top: 0mm;
+    left: 64.43182mm;
+  }
+  .max-cards-8 #print.back img.card-2 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-8 #print img.card-3 {
+    top: 0mm;
+    left: 128.86364mm;
+  }
+  .max-cards-8 #print.back img.card-3 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-8 #print img.card-4 {
+    top: 0mm;
+    left: 193.29545mm;
+  }
+  .max-cards-8 #print.back img.card-4 {
+    left: auto;
+    right: 193.29545mm;
+  }
+  .max-cards-8 #print img.card-5 {
+    top: 90mm;
+    left: 0mm;
+  }
+  .max-cards-8 #print.back img.card-5 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-8 #print img.card-6 {
+    top: 90mm;
+    left: 64.43182mm;
+  }
+  .max-cards-8 #print.back img.card-6 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-8 #print img.card-7 {
+    top: 90mm;
+    left: 128.86364mm;
+  }
+  .max-cards-8 #print.back img.card-7 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-8 #print img.card-8 {
+    top: 90mm;
+    left: 193.29545mm;
+  }
+  .max-cards-8 #print.back img.card-8 {
+    left: auto;
+    right: 193.29545mm;
+  }
+  .max-cards-9 #print {
+    width: 193.29545mm;
+    height: 270mm;
+    left: 11.05227mm;
+    top: 4.45mm;
+  }
+  .max-cards-9 #print img.card-1 {
+    top: 0mm;
+    left: 0mm;
+  }
+  .max-cards-9 #print.back img.card-1 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-9 #print img.card-2 {
+    top: 0mm;
+    left: 64.43182mm;
+  }
+  .max-cards-9 #print.back img.card-2 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-9 #print img.card-3 {
+    top: 0mm;
+    left: 128.86364mm;
+  }
+  .max-cards-9 #print.back img.card-3 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-9 #print img.card-4 {
+    top: 90mm;
+    left: 0mm;
+  }
+  .max-cards-9 #print.back img.card-4 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-9 #print img.card-5 {
+    top: 90mm;
+    left: 64.43182mm;
+  }
+  .max-cards-9 #print.back img.card-5 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-9 #print img.card-6 {
+    top: 90mm;
+    left: 128.86364mm;
+  }
+  .max-cards-9 #print.back img.card-6 {
+    left: auto;
+    right: 128.86364mm;
+  }
+  .max-cards-9 #print img.card-7 {
+    top: 180mm;
+    left: 0mm;
+  }
+  .max-cards-9 #print.back img.card-7 {
+    left: auto;
+    right: 0mm;
+  }
+  .max-cards-9 #print img.card-8 {
+    top: 180mm;
+    left: 64.43182mm;
+  }
+  .max-cards-9 #print.back img.card-8 {
+    left: auto;
+    right: 64.43182mm;
+  }
+  .max-cards-9 #print img.card-9 {
+    top: 180mm;
+    left: 128.86364mm;
+  }
+  .max-cards-9 #print.back img.card-9 {
+    left: auto;
+    right: 128.86364mm;
+  }
+}

@@ -1,0 +1,55 @@
+html
+  head
+    title NFC Card Helper
+    script(language="javascript", type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(language="javascript", type="text/javascript", src="main.js")
+    link(rel="stylesheet", type="text/css", href="style.css")
+    style#print-css(media="print")
+  body
+    - var cardMax=9
+    - var blankImgURL="images/transparent.gif"
+    div#screen
+      h1 NFC Card Helper
+      h3 What is this?
+      p This is a utility to help you with making DIY NFC cards from paper, labels, and NFC tags.
+      h3 So how do I use it?
+      p Just drag and drop your card images onto the areas for each card, print the front and back, cut out the block of cards, and stick the label, NFC tag, and paper together. Then you can either laminate and cut out the individual cards or forgo the lamination altogether if you prefer.
+      div
+        script(async, src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+        ins(
+          class="adsbygoogle", 
+          style="display:block;",
+          data-ad-client="ca-pub-5924968361554698",
+          data-ad-slot="1147664766",
+          data-ad-format="auto"
+        )
+        script (adsbygoogle = window.adsbygoogle || []).push({});
+      hr
+      p Cards per page:
+        select#perpage
+          - for (var i=1; i <= cardMax; ++i){
+            option=i
+          - }
+      p
+        label(for="bleed") Add bleed to backs:
+        input#bleed(type="checkbox", checked="checked")
+      p
+        input#print-front(type="Button", value="Print Front")
+        input#print-back(type="Button", value="Print Back")
+
+      ol#droppers
+        - for (var i = 1; i <= cardMax; ++i){
+          li.dropper(class="card-"+i, id="dropper-"+i, data-card-number=i)
+            div
+              span.front Front
+              span.back Back
+              img.front(draggable="true", id="front-dropper-"+i, src=blankImgURL)
+              img.back(draggable="true", id="back-dropper-"+i, src=blankImgURL)
+              a.clear(href="#") Clear Images
+        - }
+
+    div#print
+      img#black(src="images/black.gif")
+      - for (var i = 1; i <= cardMax; ++i){
+        img(class="card-"+i, src=blankImgURL)
+      - }

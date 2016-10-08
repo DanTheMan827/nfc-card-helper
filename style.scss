@@ -1,0 +1,187 @@
+$max-cards: 9;
+body {
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+%display-none {
+  display: none;
+}
+
+@for $x from 1 through $max-cards - 1 {
+  .max-cards-#{$x} {
+    @for $y from $x + 1 through $max-cards {
+      .card-#{$y} {
+        @extend %display-none;
+      }
+    }
+  }
+}
+
+li.dropper {
+  $aspect-height: (88/63);
+  $aspect-width: (63/88);
+  $display-width: 150px;
+  $display-height: $display-width * $aspect-height;
+  width: ($display-width * 2) + 3;
+  margin: 0 0 1em 0;
+  div {
+    height: $display-height + 2px;
+    padding-bottom: 1em;
+    position: relative;
+    display: inline-block;
+    span,
+    a {
+      z-index: 1;
+      position: absolute;
+      display: inline-block;
+      height: 1em;
+      font-size: .75em;
+      top: ($display-height / 2) - 6px;
+      width: 50%;
+      text-align: center;
+    }
+    span {
+      &.back {
+        left: 50%;
+      }
+    }
+    a {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: auto;
+      font-weight: bold;
+      color: #E00;
+    }
+  }
+  img {
+    position: relative;
+    z-index: 2;
+    width: $display-width;
+    height: $display-height;
+    border: 1px solid #CCC;
+    & + img {
+      margin-left: -1px;
+    }
+  }
+}
+
+@media screen {
+  body {
+    background-color:#e3e3e3;
+    margin:2em;
+    padding:0;
+  }
+  #screen {
+    background-color:#FFF;
+    max-width:768px;
+    padding:1em;
+    border-radius:1em;
+    margin:auto;
+  }
+  #print {
+    display:none;
+  }
+}
+
+$paper-width: 215.9mm;
+$paper-height: 279.4mm;
+@page {
+  width: 8.5in;
+  height: 11in;
+  margin: 0;
+  size: portrait
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #screen {
+    display: none;
+  }
+  #print {
+    $card-width: 63mm;
+    $card-height: 88mm;
+    $card-bleed-height: 90mm;
+    $card-bleed-width: (63 / 88 * 90mm);
+    border: .25mm solid #000;
+    background-color: #000;
+    position: absolute;
+    img {
+      width: $card-width;
+      height: $card-height;
+      position: absolute;
+      padding: (($card-bleed-height - $card-height) / 2) (($card-bleed-width - $card-width) / 2);
+      &#black {
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &.back img#black {
+      display: none;
+    }
+    &.bleed img {
+      padding: 0;
+      width: $card-bleed-width;
+      height: $card-bleed-height;
+    }
+    $sizes: 
+      (1, 1, 1, l)
+      (2, 2, 1, l)
+      (3, 3, 1, l)
+      (4, 4, 1, l)
+      (5, 4, 2, l)
+      (6, 3, 2, l)
+      (7, 4, 2, l)
+      (8, 4, 2, l)
+      (9, 3, 3, p);
+    @each $per-page, $x-per, $y-per, $orientation in $sizes {
+      @at-root {
+        .max-cards-#{$per-page} #print {
+          $total-width: $card-bleed-width * $x-per;
+          $total-height: $card-bleed-height * $y-per;
+          width: $total-width;
+          height: $total-height;
+          @if $orientation=='l' {
+            left: ($paper-height / 2) - ($total-width / 2) - .25mm;
+            top: ($paper-width / 2) - ($total-height / 2) - .25mm;
+          }
+          @else {
+            left: ($paper-width / 2) - ($total-width / 2) - .25mm;
+            top: ($paper-height / 2) - ($total-height / 2) - .25mm;
+          }
+          @for $y from 1 through $y-per {
+            @for $x from 1 through $x-per {
+              $card-number: (($y - 1) * $x-per) + $x;
+              @if $card-number <=$per-page {
+                $y-pos: $card-bleed-height * ($y - 1);
+                $x-pos: $card-bleed-width * ($x - 1);
+                img.card-#{$card-number} {
+                  top: $y-pos;
+                  left: $x-pos;
+                }
+                &.back img.card-#{$card-number} {
+                  left: auto;
+                  right: $x-pos;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
