@@ -103,7 +103,6 @@ li.dropper img + img {
 
   #print {
     border: .25mm solid #000;
-    background-color: #000;
     position: absolute;
   }
   #print img {
