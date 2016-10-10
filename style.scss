@@ -24,13 +24,21 @@ a {
   }
 }
 
+ol#droppers {
+  padding: 0;
+  margin: 0;
+}
+
 li.dropper {
   $aspect-height: (88/63);
   $aspect-width: (63/88);
   $display-width: 150px;
   $display-height: $display-width * $aspect-height;
-  width: ($display-width * 2) + 3;
+  width: calc(50% - 3px);
+  display: inline-block;
+  text-align: center;
   margin: 0 0 1em 0;
+  
   div {
     height: $display-height + 2px;
     padding-bottom: 1em;

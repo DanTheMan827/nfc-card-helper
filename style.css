@@ -13,8 +13,15 @@ a:hover {
   display: none;
 }
 
+ol#droppers {
+  padding: 0;
+  margin: 0;
+}
+
 li.dropper {
-  width: 303px;
+  width: calc(50% - 3px);
+  display: inline-block;
+  text-align: center;
   margin: 0 0 1em 0;
 }
 li.dropper div {
@@ -71,7 +78,7 @@ li.dropper img + img {
     border-radius: 1em;
     margin: auto;
     position: relative;
-    border:1px solid #ccc;
+    border: 1px solid #ccc;
   }
 
   #print {
