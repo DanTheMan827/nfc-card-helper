@@ -1,0 +1,26 @@
+{
+  "name": "nfc-card-helper",
+  "version": "1.0.0",
+  "description": "This is a utility to help you with making DIY NFC cards from paper, labels, and NFC tags.",
+  "main": "main.js",
+  "scripts": {
+    "build-jade": "pug -P index.jade index.html",
+    "build-css": "node-sass --include-path ./ style.scss style.css",
+    "watch": "nodemon -x \"npm run build-css & npm run build-jade\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palsch/nfc-card-helper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/palsch/nfc-card-helper/issues"
+  },
+  "homepage": "https://github.com/palsch/nfc-card-helper#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
+    "pug": "^2.0.0-beta11"
+  }
+}

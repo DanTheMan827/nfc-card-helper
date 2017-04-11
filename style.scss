@@ -113,6 +113,7 @@ $paper-height: 279.4mm;
 
 @media print {
   body {
+    background-color:#e3e3e3;
     margin: 0;
     padding: 0;
   }
@@ -120,32 +121,108 @@ $paper-height: 279.4mm;
     display: none;
   }
   #print {
-    $card-width: 63mm;
-    $card-height: 88mm;
-    $card-bleed-height: 90mm;
-    $card-bleed-width: (63 / 88 * 90mm);
-    border: .25mm solid #000;
-    position: absolute;
+    $card-width: 63mm; // 54mm
+    $card-height: 88mm; // 86mm
+    $card-bleed-size: 8px;
+    $card-bleed-width: $card-width + 2 * $card-bleed-size;
+    $card-bleed-height: $card-height + 2 * $card-bleed-size;
+    $card-page-marks-size: 16px;
+    position: absolute; 
     img {
-      width: $card-width;
-      height: $card-height;
-      position: absolute;
-      padding: (($card-bleed-height - $card-height) / 2) (($card-bleed-width - $card-width) / 2);
-      &#black {
-        padding: 0;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &.back img#black {
       display: none;
     }
-    &.bleed img {
-      padding: 0;
+    img.custom {
+      display: initial;
       width: $card-bleed-width;
       height: $card-bleed-height;
+    }    
+    div {
+      width: $card-bleed-width;
+      height: $card-bleed-height;
+      position: absolute;
+      margin: $card-page-marks-size;
+      
+      &:before, &:after {
+        position: absolute;
+        content: '';
+        border: solid black;
+        z-index: -1;
+      }            
+      &:before {
+        top: -$card-page-marks-size; bottom: -$card-page-marks-size;
+        left: $card-bleed-size; right: $card-bleed-size;
+        border-width: 0 1px;
+      }
+      &:after {
+        left: -$card-page-marks-size; right: -$card-page-marks-size;
+        top: $card-bleed-size; bottom: $card-bleed-size;
+        border-width: 1px 0;
+      }
+    }
+    &.bleed {
+      img.custom {
+        position: absolute;
+        top: $card-bleed-size;
+        left: $card-bleed-size;
+        width: $card-width;
+        height: $card-height;
+      }
+      img.black {
+        display: initial;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $card-bleed-width;
+        height: $card-bleed-height;
+      }
+      img {
+        &.mirror-top, &.mirror-bottom, &.mirror-left, &.mirror-right {
+          display: initial;
+          position: absolute;
+          object-fit: cover;
+          object-position: 0 0;
+        }
+        &.mirror-top, &.mirror-bottom {
+          -moz-transform: scaleY(-1);
+          -o-transform: scaleY(-1);
+          -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+          filter: FlipV;
+          -ms-filter: "FlipV";
+        }
+        &.mirror-left, &.mirror-right {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+        }
+        &.mirror-top, &.mirror-bottom {
+          width: $card-width;
+          height: $card-bleed-size;
+          left: $card-bleed-size;
+        }
+        &.mirror-top {
+          top: 0;
+        } 
+        &.mirror-bottom  {
+          bottom: 0;
+          object-position: 100% 100%;
+        } 
+        &.mirror-left, &.mirror-right {
+          width: $card-bleed-size;
+          height: $card-height;
+          top: $card-bleed-size;
+        }
+        &.mirror-left {
+          left: 0;
+        } 
+        &.mirror-right  {
+          right: 0;
+          object-position: 100% 100%;
+        } 
+      }
     }
     $sizes: 
       (1, 1, 1, l)
@@ -160,8 +237,8 @@ $paper-height: 279.4mm;
     @each $per-page, $x-per, $y-per, $orientation in $sizes {
       @at-root {
         .max-cards-#{$per-page} #print {
-          $total-width: $card-bleed-width * $x-per;
-          $total-height: $card-bleed-height * $y-per;
+          $total-width: 2 * $card-page-marks-size + $card-bleed-width * $x-per;
+          $total-height: 2 * $card-page-marks-size + $card-bleed-height * $y-per;
           width: $total-width;
           height: $total-height;
           @if $orientation=='l' {
@@ -178,14 +255,14 @@ $paper-height: 279.4mm;
               @if $card-number <=$per-page {
                 $y-pos: $card-bleed-height * ($y - 1);
                 $x-pos: $card-bleed-width * ($x - 1);
-                img.card-#{$card-number} {
+                div.card-#{$card-number} {
                   top: $y-pos;
                   left: $x-pos;
                 }
-                &.back img.card-#{$card-number} {
+                &.back div.card-#{$card-number} {
                   left: auto;
                   right: $x-pos;
-                }
+                }                
               }
             }
           }
@@ -194,3 +271,6 @@ $paper-height: 279.4mm;
     }
   }
 }
+
+
+
