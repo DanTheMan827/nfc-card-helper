@@ -1,4 +1,8 @@
 $max-cards: 9;
+
+$card-width: 54mm; // 54mm
+$card-height: 86mm; // 86mm
+
 body {
   font-family: Arial;
 }
@@ -30,8 +34,8 @@ ol#droppers {
 }
 
 li.dropper {
-  $aspect-height: (88/63);
-  $aspect-width: (63/88);
+  $aspect-height: ($card-height/$card-width);
+  $aspect-width: ($card-width/$card-height);
   $display-width: 150px;
   $display-height: $display-width * $aspect-height;
   width: calc(50% - 3px);
@@ -121,8 +125,6 @@ $paper-height: 279.4mm;
     display: none;
   }
   #print {
-    $card-width: 63mm; // 54mm
-    $card-height: 88mm; // 86mm
     $card-bleed-size: 8px;
     $card-bleed-width: $card-width + 2 * $card-bleed-size;
     $card-bleed-height: $card-height + 2 * $card-bleed-size;
@@ -241,14 +243,12 @@ $paper-height: 279.4mm;
           $total-height: 2 * $card-page-marks-size + $card-bleed-height * $y-per;
           width: $total-width;
           height: $total-height;
-          @if $orientation=='l' {
-            left: ($paper-height / 2) - ($total-width / 2) - .25mm;
-            top: ($paper-width / 2) - ($total-height / 2) - .25mm;
-          }
-          @else {
-            left: ($paper-width / 2) - ($total-width / 2) - .25mm;
-            top: ($paper-height / 2) - ($total-height / 2) - .25mm;
-          }
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin: 0;
+          margin-top: -($total-height / 2); 
+          margin-left: -($total-width / 2);
           @for $y from 1 through $y-per {
             @for $x from 1 through $x-per {
               $card-number: (($y - 1) * $x-per) + $x;

@@ -19,7 +19,7 @@ li.dropper {
   text-align: center;
   margin: 0 0 1em 0; }
   li.dropper div {
-    height: 211.52381px;
+    height: 240.88889px;
     padding-bottom: 1em;
     position: relative;
     display: inline-block; }
@@ -30,7 +30,7 @@ li.dropper {
       display: inline-block;
       height: 1em;
       font-size: .75em;
-      top: 98.7619px;
+      top: 113.44444px;
       width: 50%;
       text-align: center; }
     li.dropper div span.back {
@@ -47,7 +47,7 @@ li.dropper {
     position: relative;
     z-index: 2;
     width: 150px;
-    height: 209.52381px;
+    height: 238.88889px;
     border: 1px solid #CCC; }
     li.dropper img + img {
       margin-left: -1px; }
@@ -87,11 +87,11 @@ li.dropper {
       display: none; }
     #print img.custom {
       display: initial;
-      width: 67.23333mm;
-      height: 92.23333mm; }
+      width: 58.23333mm;
+      height: 90.23333mm; }
     #print div {
-      width: 67.23333mm;
-      height: 92.23333mm;
+      width: 58.23333mm;
+      height: 90.23333mm;
       position: absolute;
       margin: 16px; }
       #print div:before, #print div:after {
@@ -115,15 +115,15 @@ li.dropper {
       position: absolute;
       top: 8px;
       left: 8px;
-      width: 63mm;
-      height: 88mm; }
+      width: 54mm;
+      height: 86mm; }
     #print.bleed img.black {
       display: initial;
       position: absolute;
       top: 0;
       left: 0;
-      width: 67.23333mm;
-      height: 92.23333mm; }
+      width: 58.23333mm;
+      height: 90.23333mm; }
     #print.bleed img.mirror-top, #print.bleed img.mirror-bottom, #print.bleed img.mirror-left, #print.bleed img.mirror-right {
       display: initial;
       position: absolute;
@@ -144,7 +144,7 @@ li.dropper {
       filter: FlipH;
       -ms-filter: "FlipH"; }
     #print.bleed img.mirror-top, #print.bleed img.mirror-bottom {
-      width: 63mm;
+      width: 54mm;
       height: 8px;
       left: 8px; }
     #print.bleed img.mirror-top {
@@ -154,7 +154,7 @@ li.dropper {
       object-position: 100% 100%; }
     #print.bleed img.mirror-left, #print.bleed img.mirror-right {
       width: 8px;
-      height: 88mm;
+      height: 86mm;
       top: 8px; }
     #print.bleed img.mirror-left {
       left: 0; }
@@ -162,10 +162,14 @@ li.dropper {
       right: 0;
       object-position: 100% 100%; }
     .max-cards-1 #print {
-      width: 286.11024px;
-      height: 380.59843px;
-      left: 101.6mm;
-      top: 57.35mm; }
+      width: 252.09449px;
+      height: 373.03937px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      margin-top: -186.51969px;
+      margin-left: -126.04724px; }
       .max-cards-1 #print div.card-1 {
         top: 0mm;
         left: 0mm; }
@@ -173,10 +177,14 @@ li.dropper {
         left: auto;
         right: 0mm; }
     .max-cards-2 #print {
-      width: 540.22047px;
-      height: 380.59843px;
-      left: 67.98333mm;
-      top: 57.35mm; }
+      width: 472.18898px;
+      height: 373.03937px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      margin-top: -186.51969px;
+      margin-left: -236.09449px; }
       .max-cards-2 #print div.card-1 {
         top: 0mm;
         left: 0mm; }
@@ -185,15 +193,19 @@ li.dropper {
         right: 0mm; }
       .max-cards-2 #print div.card-2 {
         top: 0mm;
-        left: 67.23333mm; }
+        left: 58.23333mm; }
       .max-cards-2 #print.back div.card-2 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
     .max-cards-3 #print {
-      width: 794.33071px;
-      height: 380.59843px;
-      left: 34.36667mm;
-      top: 57.35mm; }
+      width: 692.28346px;
+      height: 373.03937px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      margin-top: -186.51969px;
+      margin-left: -346.14173px; }
       .max-cards-3 #print div.card-1 {
         top: 0mm;
         left: 0mm; }
@@ -202,21 +214,25 @@ li.dropper {
         right: 0mm; }
       .max-cards-3 #print div.card-2 {
         top: 0mm;
-        left: 67.23333mm; }
+        left: 58.23333mm; }
       .max-cards-3 #print.back div.card-2 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-3 #print div.card-3 {
         top: 0mm;
-        left: 134.46667mm; }
+        left: 116.46667mm; }
       .max-cards-3 #print.back div.card-3 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
     .max-cards-4 #print {
-      width: 1048.44094px;
-      height: 380.59843px;
-      left: 0.75mm;
-      top: 57.35mm; }
+      width: 912.37795px;
+      height: 373.03937px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      margin-top: -186.51969px;
+      margin-left: -456.18898px; }
       .max-cards-4 #print div.card-1 {
         top: 0mm;
         left: 0mm; }
@@ -225,27 +241,31 @@ li.dropper {
         right: 0mm; }
       .max-cards-4 #print div.card-2 {
         top: 0mm;
-        left: 67.23333mm; }
+        left: 58.23333mm; }
       .max-cards-4 #print.back div.card-2 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-4 #print div.card-3 {
         top: 0mm;
-        left: 134.46667mm; }
+        left: 116.46667mm; }
       .max-cards-4 #print.back div.card-3 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
       .max-cards-4 #print div.card-4 {
         top: 0mm;
-        left: 201.7mm; }
+        left: 174.7mm; }
       .max-cards-4 #print.back div.card-4 {
         left: auto;
-        right: 201.7mm; }
+        right: 174.7mm; }
     .max-cards-5 #print {
-      width: 1048.44094px;
-      height: 729.19685px;
-      left: 0.75mm;
-      top: 11.23333mm; }
+      width: 912.37795px;
+      height: 714.07874px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      margin-top: -357.03937px;
+      margin-left: -456.18898px; }
       .max-cards-5 #print div.card-1 {
         top: 0mm;
         left: 0mm; }
@@ -254,33 +274,37 @@ li.dropper {
         right: 0mm; }
       .max-cards-5 #print div.card-2 {
         top: 0mm;
-        left: 67.23333mm; }
+        left: 58.23333mm; }
       .max-cards-5 #print.back div.card-2 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-5 #print div.card-3 {
         top: 0mm;
-        left: 134.46667mm; }
+        left: 116.46667mm; }
       .max-cards-5 #print.back div.card-3 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
       .max-cards-5 #print div.card-4 {
         top: 0mm;
-        left: 201.7mm; }
+        left: 174.7mm; }
       .max-cards-5 #print.back div.card-4 {
         left: auto;
-        right: 201.7mm; }
+        right: 174.7mm; }
       .max-cards-5 #print div.card-5 {
-        top: 92.23333mm;
+        top: 90.23333mm;
         left: 0mm; }
       .max-cards-5 #print.back div.card-5 {
         left: auto;
         right: 0mm; }
     .max-cards-6 #print {
-      width: 794.33071px;
-      height: 729.19685px;
-      left: 34.36667mm;
-      top: 11.23333mm; }
+      width: 692.28346px;
+      height: 714.07874px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      margin-top: -357.03937px;
+      margin-left: -346.14173px; }
       .max-cards-6 #print div.card-1 {
         top: 0mm;
         left: 0mm; }
@@ -289,39 +313,43 @@ li.dropper {
         right: 0mm; }
       .max-cards-6 #print div.card-2 {
         top: 0mm;
-        left: 67.23333mm; }
+        left: 58.23333mm; }
       .max-cards-6 #print.back div.card-2 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-6 #print div.card-3 {
         top: 0mm;
-        left: 134.46667mm; }
+        left: 116.46667mm; }
       .max-cards-6 #print.back div.card-3 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
       .max-cards-6 #print div.card-4 {
-        top: 92.23333mm;
+        top: 90.23333mm;
         left: 0mm; }
       .max-cards-6 #print.back div.card-4 {
         left: auto;
         right: 0mm; }
       .max-cards-6 #print div.card-5 {
-        top: 92.23333mm;
-        left: 67.23333mm; }
+        top: 90.23333mm;
+        left: 58.23333mm; }
       .max-cards-6 #print.back div.card-5 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-6 #print div.card-6 {
-        top: 92.23333mm;
-        left: 134.46667mm; }
+        top: 90.23333mm;
+        left: 116.46667mm; }
       .max-cards-6 #print.back div.card-6 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
     .max-cards-7 #print {
-      width: 1048.44094px;
-      height: 729.19685px;
-      left: 0.75mm;
-      top: 11.23333mm; }
+      width: 912.37795px;
+      height: 714.07874px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      margin-top: -357.03937px;
+      margin-left: -456.18898px; }
       .max-cards-7 #print div.card-1 {
         top: 0mm;
         left: 0mm; }
@@ -330,45 +358,49 @@ li.dropper {
         right: 0mm; }
       .max-cards-7 #print div.card-2 {
         top: 0mm;
-        left: 67.23333mm; }
+        left: 58.23333mm; }
       .max-cards-7 #print.back div.card-2 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-7 #print div.card-3 {
         top: 0mm;
-        left: 134.46667mm; }
+        left: 116.46667mm; }
       .max-cards-7 #print.back div.card-3 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
       .max-cards-7 #print div.card-4 {
         top: 0mm;
-        left: 201.7mm; }
+        left: 174.7mm; }
       .max-cards-7 #print.back div.card-4 {
         left: auto;
-        right: 201.7mm; }
+        right: 174.7mm; }
       .max-cards-7 #print div.card-5 {
-        top: 92.23333mm;
+        top: 90.23333mm;
         left: 0mm; }
       .max-cards-7 #print.back div.card-5 {
         left: auto;
         right: 0mm; }
       .max-cards-7 #print div.card-6 {
-        top: 92.23333mm;
-        left: 67.23333mm; }
+        top: 90.23333mm;
+        left: 58.23333mm; }
       .max-cards-7 #print.back div.card-6 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-7 #print div.card-7 {
-        top: 92.23333mm;
-        left: 134.46667mm; }
+        top: 90.23333mm;
+        left: 116.46667mm; }
       .max-cards-7 #print.back div.card-7 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
     .max-cards-8 #print {
-      width: 1048.44094px;
-      height: 729.19685px;
-      left: 0.75mm;
-      top: 11.23333mm; }
+      width: 912.37795px;
+      height: 714.07874px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      margin-top: -357.03937px;
+      margin-left: -456.18898px; }
       .max-cards-8 #print div.card-1 {
         top: 0mm;
         left: 0mm; }
@@ -377,51 +409,55 @@ li.dropper {
         right: 0mm; }
       .max-cards-8 #print div.card-2 {
         top: 0mm;
-        left: 67.23333mm; }
+        left: 58.23333mm; }
       .max-cards-8 #print.back div.card-2 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-8 #print div.card-3 {
         top: 0mm;
-        left: 134.46667mm; }
+        left: 116.46667mm; }
       .max-cards-8 #print.back div.card-3 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
       .max-cards-8 #print div.card-4 {
         top: 0mm;
-        left: 201.7mm; }
+        left: 174.7mm; }
       .max-cards-8 #print.back div.card-4 {
         left: auto;
-        right: 201.7mm; }
+        right: 174.7mm; }
       .max-cards-8 #print div.card-5 {
-        top: 92.23333mm;
+        top: 90.23333mm;
         left: 0mm; }
       .max-cards-8 #print.back div.card-5 {
         left: auto;
         right: 0mm; }
       .max-cards-8 #print div.card-6 {
-        top: 92.23333mm;
-        left: 67.23333mm; }
+        top: 90.23333mm;
+        left: 58.23333mm; }
       .max-cards-8 #print.back div.card-6 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-8 #print div.card-7 {
-        top: 92.23333mm;
-        left: 134.46667mm; }
+        top: 90.23333mm;
+        left: 116.46667mm; }
       .max-cards-8 #print.back div.card-7 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
       .max-cards-8 #print div.card-8 {
-        top: 92.23333mm;
-        left: 201.7mm; }
+        top: 90.23333mm;
+        left: 174.7mm; }
       .max-cards-8 #print.back div.card-8 {
         left: auto;
-        right: 201.7mm; }
+        right: 174.7mm; }
     .max-cards-9 #print {
-      width: 794.33071px;
-      height: 1077.79528px;
-      left: 2.61667mm;
-      top: -3.13333mm; }
+      width: 692.28346px;
+      height: 1055.11811px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      margin-top: -527.55906px;
+      margin-left: -346.14173px; }
       .max-cards-9 #print div.card-1 {
         top: 0mm;
         left: 0mm; }
@@ -430,49 +466,49 @@ li.dropper {
         right: 0mm; }
       .max-cards-9 #print div.card-2 {
         top: 0mm;
-        left: 67.23333mm; }
+        left: 58.23333mm; }
       .max-cards-9 #print.back div.card-2 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-9 #print div.card-3 {
         top: 0mm;
-        left: 134.46667mm; }
+        left: 116.46667mm; }
       .max-cards-9 #print.back div.card-3 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
       .max-cards-9 #print div.card-4 {
-        top: 92.23333mm;
+        top: 90.23333mm;
         left: 0mm; }
       .max-cards-9 #print.back div.card-4 {
         left: auto;
         right: 0mm; }
       .max-cards-9 #print div.card-5 {
-        top: 92.23333mm;
-        left: 67.23333mm; }
+        top: 90.23333mm;
+        left: 58.23333mm; }
       .max-cards-9 #print.back div.card-5 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-9 #print div.card-6 {
-        top: 92.23333mm;
-        left: 134.46667mm; }
+        top: 90.23333mm;
+        left: 116.46667mm; }
       .max-cards-9 #print.back div.card-6 {
         left: auto;
-        right: 134.46667mm; }
+        right: 116.46667mm; }
       .max-cards-9 #print div.card-7 {
-        top: 184.46667mm;
+        top: 180.46667mm;
         left: 0mm; }
       .max-cards-9 #print.back div.card-7 {
         left: auto;
         right: 0mm; }
       .max-cards-9 #print div.card-8 {
-        top: 184.46667mm;
-        left: 67.23333mm; }
+        top: 180.46667mm;
+        left: 58.23333mm; }
       .max-cards-9 #print.back div.card-8 {
         left: auto;
-        right: 67.23333mm; }
+        right: 58.23333mm; }
       .max-cards-9 #print div.card-9 {
-        top: 184.46667mm;
-        left: 134.46667mm; }
+        top: 180.46667mm;
+        left: 116.46667mm; }
       .max-cards-9 #print.back div.card-9 {
         left: auto;
-        right: 134.46667mm; } }
+        right: 116.46667mm; } }
