@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <title>NFC Card Helper</title>
@@ -13,10 +14,6 @@
       <p>This is a utility to help you with making DIY NFC cards from paper, labels, and NFC tags.</p>
       <h3>So how do I use it?</h3>
       <p>Just drag and drop your card images onto the areas for each card, print the front and back, cut out the block of cards, and stick the label, NFC tag, and paper together. Then you can either laminate and cut out the individual cards or forgo the lamination altogether if you prefer.</p>
-      <div>
-        <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins style="display:block;" data-ad-client="ca-pub-5924968361554698" data-ad-slot="1147664766" data-ad-format="auto" class="adsbygoogle"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
       <hr/>
       <p>Cards per page:
         <select id="perpage">
@@ -32,44 +29,53 @@
         </select>
       </p>
       <p>
-        <label for="bleed">Add bleed to backs:</label>
+        <label for="bleed">Add bleed:</label>
         <input id="bleed" type="checkbox" checked="checked"/>
       </p>
-      <p>
+      <p>       
         <input id="print-front" type="Button" value="Print Front"/>
         <input id="print-back" type="Button" value="Print Back"/>
       </p>
       <ol id="droppers">
-        <li id="dropper-1" data-card-number='1' class="dropper card-1">
-          <div><span class="front">Front</span><span class="back">Back</span><img draggable="true" id="front-dropper-1" src="images/transparent.gif" class="front"/><img draggable="true" id="back-dropper-1" src="images/transparent.gif" class="back"/><a href="#" class="clear">Clear Images</a></div>
+        <li class="dropper card-1" id="dropper-1" data-card-number="1">
+          <div><span class="front">Front</span><span class="back">Back</span><img class="front" draggable="true" id="front-dropper-1" src="images/transparent.gif"/><img class="back" draggable="true" id="back-dropper-1" src="images/transparent.gif"/><a class="clear" href="#">Clear Images</a></div>
         </li>
-        <li id="dropper-2" data-card-number='2' class="dropper card-2">
-          <div><span class="front">Front</span><span class="back">Back</span><img draggable="true" id="front-dropper-2" src="images/transparent.gif" class="front"/><img draggable="true" id="back-dropper-2" src="images/transparent.gif" class="back"/><a href="#" class="clear">Clear Images</a></div>
+        <li class="dropper card-2" id="dropper-2" data-card-number="2">
+          <div><span class="front">Front</span><span class="back">Back</span><img class="front" draggable="true" id="front-dropper-2" src="images/transparent.gif"/><img class="back" draggable="true" id="back-dropper-2" src="images/transparent.gif"/><a class="clear" href="#">Clear Images</a></div>
         </li>
-        <li id="dropper-3" data-card-number='3' class="dropper card-3">
-          <div><span class="front">Front</span><span class="back">Back</span><img draggable="true" id="front-dropper-3" src="images/transparent.gif" class="front"/><img draggable="true" id="back-dropper-3" src="images/transparent.gif" class="back"/><a href="#" class="clear">Clear Images</a></div>
+        <li class="dropper card-3" id="dropper-3" data-card-number="3">
+          <div><span class="front">Front</span><span class="back">Back</span><img class="front" draggable="true" id="front-dropper-3" src="images/transparent.gif"/><img class="back" draggable="true" id="back-dropper-3" src="images/transparent.gif"/><a class="clear" href="#">Clear Images</a></div>
         </li>
-        <li id="dropper-4" data-card-number='4' class="dropper card-4">
-          <div><span class="front">Front</span><span class="back">Back</span><img draggable="true" id="front-dropper-4" src="images/transparent.gif" class="front"/><img draggable="true" id="back-dropper-4" src="images/transparent.gif" class="back"/><a href="#" class="clear">Clear Images</a></div>
+        <li class="dropper card-4" id="dropper-4" data-card-number="4">
+          <div><span class="front">Front</span><span class="back">Back</span><img class="front" draggable="true" id="front-dropper-4" src="images/transparent.gif"/><img class="back" draggable="true" id="back-dropper-4" src="images/transparent.gif"/><a class="clear" href="#">Clear Images</a></div>
         </li>
-        <li id="dropper-5" data-card-number='5' class="dropper card-5">
-          <div><span class="front">Front</span><span class="back">Back</span><img draggable="true" id="front-dropper-5" src="images/transparent.gif" class="front"/><img draggable="true" id="back-dropper-5" src="images/transparent.gif" class="back"/><a href="#" class="clear">Clear Images</a></div>
+        <li class="dropper card-5" id="dropper-5" data-card-number="5">
+          <div><span class="front">Front</span><span class="back">Back</span><img class="front" draggable="true" id="front-dropper-5" src="images/transparent.gif"/><img class="back" draggable="true" id="back-dropper-5" src="images/transparent.gif"/><a class="clear" href="#">Clear Images</a></div>
         </li>
-        <li id="dropper-6" data-card-number='6' class="dropper card-6">
-          <div><span class="front">Front</span><span class="back">Back</span><img draggable="true" id="front-dropper-6" src="images/transparent.gif" class="front"/><img draggable="true" id="back-dropper-6" src="images/transparent.gif" class="back"/><a href="#" class="clear">Clear Images</a></div>
+        <li class="dropper card-6" id="dropper-6" data-card-number="6">
+          <div><span class="front">Front</span><span class="back">Back</span><img class="front" draggable="true" id="front-dropper-6" src="images/transparent.gif"/><img class="back" draggable="true" id="back-dropper-6" src="images/transparent.gif"/><a class="clear" href="#">Clear Images</a></div>
         </li>
-        <li id="dropper-7" data-card-number='7' class="dropper card-7">
-          <div><span class="front">Front</span><span class="back">Back</span><img draggable="true" id="front-dropper-7" src="images/transparent.gif" class="front"/><img draggable="true" id="back-dropper-7" src="images/transparent.gif" class="back"/><a href="#" class="clear">Clear Images</a></div>
+        <li class="dropper card-7" id="dropper-7" data-card-number="7">
+          <div><span class="front">Front</span><span class="back">Back</span><img class="front" draggable="true" id="front-dropper-7" src="images/transparent.gif"/><img class="back" draggable="true" id="back-dropper-7" src="images/transparent.gif"/><a class="clear" href="#">Clear Images</a></div>
         </li>
-        <li id="dropper-8" data-card-number='8' class="dropper card-8">
-          <div><span class="front">Front</span><span class="back">Back</span><img draggable="true" id="front-dropper-8" src="images/transparent.gif" class="front"/><img draggable="true" id="back-dropper-8" src="images/transparent.gif" class="back"/><a href="#" class="clear">Clear Images</a></div>
+        <li class="dropper card-8" id="dropper-8" data-card-number="8">
+          <div><span class="front">Front</span><span class="back">Back</span><img class="front" draggable="true" id="front-dropper-8" src="images/transparent.gif"/><img class="back" draggable="true" id="back-dropper-8" src="images/transparent.gif"/><a class="clear" href="#">Clear Images</a></div>
         </li>
-        <li id="dropper-9" data-card-number='9' class="dropper card-9">
-          <div><span class="front">Front</span><span class="back">Back</span><img draggable="true" id="front-dropper-9" src="images/transparent.gif" class="front"/><img draggable="true" id="back-dropper-9" src="images/transparent.gif" class="back"/><a href="#" class="clear">Clear Images</a></div>
+        <li class="dropper card-9" id="dropper-9" data-card-number="9">
+          <div><span class="front">Front</span><span class="back">Back</span><img class="front" draggable="true" id="front-dropper-9" src="images/transparent.gif"/><img class="back" draggable="true" id="back-dropper-9" src="images/transparent.gif"/><a class="clear" href="#">Clear Images</a></div>
         </li>
       </ol>
     </div>
-    <div id="print"><img id="black" src="images/black.gif"/><img src="images/transparent.gif" class="card-1"/><img src="images/transparent.gif" class="card-2"/><img src="images/transparent.gif" class="card-3"/><img src="images/transparent.gif" class="card-4"/><img src="images/transparent.gif" class="card-5"/><img src="images/transparent.gif" class="card-6"/><img src="images/transparent.gif" class="card-7"/><img src="images/transparent.gif" class="card-8"/><img src="images/transparent.gif" class="card-9"/>
+    <div id="print">
+      <div class="card-1"><img class="black" src="images/black.gif"/><img class="mirror-top" src="images/transparent.gif"/><img class="mirror-bottom" src="images/transparent.gif"/><img class="mirror-left" src="images/transparent.gif"/><img class="mirror-right" src="images/transparent.gif"/><img class="custom" src="images/transparent.gif"/></div>
+      <div class="card-2"><img class="black" src="images/black.gif"/><img class="mirror-top" src="images/transparent.gif"/><img class="mirror-bottom" src="images/transparent.gif"/><img class="mirror-left" src="images/transparent.gif"/><img class="mirror-right" src="images/transparent.gif"/><img class="custom" src="images/transparent.gif"/></div>
+      <div class="card-3"><img class="black" src="images/black.gif"/><img class="mirror-top" src="images/transparent.gif"/><img class="mirror-bottom" src="images/transparent.gif"/><img class="mirror-left" src="images/transparent.gif"/><img class="mirror-right" src="images/transparent.gif"/><img class="custom" src="images/transparent.gif"/></div>
+      <div class="card-4"><img class="black" src="images/black.gif"/><img class="mirror-top" src="images/transparent.gif"/><img class="mirror-bottom" src="images/transparent.gif"/><img class="mirror-left" src="images/transparent.gif"/><img class="mirror-right" src="images/transparent.gif"/><img class="custom" src="images/transparent.gif"/></div>
+      <div class="card-5"><img class="black" src="images/black.gif"/><img class="mirror-top" src="images/transparent.gif"/><img class="mirror-bottom" src="images/transparent.gif"/><img class="mirror-left" src="images/transparent.gif"/><img class="mirror-right" src="images/transparent.gif"/><img class="custom" src="images/transparent.gif"/></div>
+      <div class="card-6"><img class="black" src="images/black.gif"/><img class="mirror-top" src="images/transparent.gif"/><img class="mirror-bottom" src="images/transparent.gif"/><img class="mirror-left" src="images/transparent.gif"/><img class="mirror-right" src="images/transparent.gif"/><img class="custom" src="images/transparent.gif"/></div>
+      <div class="card-7"><img class="black" src="images/black.gif"/><img class="mirror-top" src="images/transparent.gif"/><img class="mirror-bottom" src="images/transparent.gif"/><img class="mirror-left" src="images/transparent.gif"/><img class="mirror-right" src="images/transparent.gif"/><img class="custom" src="images/transparent.gif"/></div>
+      <div class="card-8"><img class="black" src="images/black.gif"/><img class="mirror-top" src="images/transparent.gif"/><img class="mirror-bottom" src="images/transparent.gif"/><img class="mirror-left" src="images/transparent.gif"/><img class="mirror-right" src="images/transparent.gif"/><img class="custom" src="images/transparent.gif"/></div>
+      <div class="card-9"><img class="black" src="images/black.gif"/><img class="mirror-top" src="images/transparent.gif"/><img class="mirror-bottom" src="images/transparent.gif"/><img class="mirror-left" src="images/transparent.gif"/><img class="mirror-right" src="images/transparent.gif"/><img class="custom" src="images/transparent.gif"/></div>
     </div>
   </body>
 </html>

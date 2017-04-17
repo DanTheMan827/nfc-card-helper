@@ -23,8 +23,14 @@ $(function() {
 
     $("ol#droppers li.dropper").each(function(i, e) {
       $dropper = $(this);
-      $("#print img.card-" + $dropper.data("card-number"))
-        .attr("src", $(this).find("img." + frontBack).attr("src"));
+      let img = $(this).find("img." + frontBack).attr("src");
+      if(img == "images/transparent.gif"){
+        $("#print div.card-" + $dropper.data("card-number")).css('display', 'none');
+      } else {
+        $("#print div.card-" + $dropper.data("card-number"))
+          .css('display', 'block')
+          .find('img').attr('src', img);          
+      }
     });
 
     $("#print-css").html('@page { size : ' + sizes[$("#perpage").val()] + ' }');
@@ -32,7 +38,7 @@ $(function() {
       .removeClass("front")
       .removeClass("back")
       .addClass(frontBack)
-      .toggleClass("bleed", $("#bleed").prop("checked") && frontBack == "back");
+      .toggleClass("bleed", $("#bleed").prop("checked"));
     window.print();
   })
   $("#droppers a.clear").click(function(e) {
@@ -73,11 +79,3 @@ $(function() {
       return false;
     })
 });
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-50411-3', 'auto');
-ga('send', 'pageview');
