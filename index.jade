@@ -22,16 +22,6 @@ html
       p This is a utility to help you with making DIY NFC cards from paper, labels, and NFC tags.
       h3 So how do I use it?
       p Just drag and drop your card images onto the areas for each card, print the front and back, cut out the block of cards, and stick the label, NFC tag, and paper together. Then you can either laminate and cut out the individual cards or forgo the lamination altogether if you prefer.
-      div
-        script(async, src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
-        ins(
-          class="adsbygoogle", 
-          style="display:block;",
-          data-ad-client="ca-pub-5924968361554698",
-          data-ad-slot="1147664766",
-          data-ad-format="auto"
-        )
-        script (adsbygoogle = window.adsbygoogle || []).push({});
       hr
       p Cards per page:
         select#perpage
@@ -39,9 +29,9 @@ html
             option=i
           - }
       p
-        label(for="bleed") Add bleed to backs:
+        label(for="bleed") Add bleed:
         input#bleed(type="checkbox", checked="checked")
-      p
+      p        
         input#print-front(type="Button", value="Print Front")
         input#print-back(type="Button", value="Print Back")
 
@@ -57,7 +47,12 @@ html
         - }
 
     div#print
-      img#black(src="images/black.gif")
       - for (var i = 1; i <= cardMax; ++i){
-        img(class="card-"+i, src=blankImgURL)
+        div(class="card-"+i)
+          img(class="black", src="images/black.gif")
+          img(class="mirror-top", src=blankImgURL)
+          img(class="mirror-bottom", src=blankImgURL)
+          img(class="mirror-left", src=blankImgURL)
+          img(class="mirror-right", src=blankImgURL)
+          img(class="custom", src=blankImgURL)
       - }
